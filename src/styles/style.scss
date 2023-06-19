@@ -16,9 +16,14 @@ html{
 body, #root{
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  background: #12192f;
+  overflow: auto;
 }
 
+
+*{
+  box-sizing: border-box;
+}
 
 .homepage{
   background-color: rgb(15, 23, 42);
@@ -42,3 +47,4 @@ body, #root{
         transform: translateY(0px);
     }
 }
+
