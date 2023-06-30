@@ -48,3 +48,14 @@ body, #root{
     }
 }
 
+select::-ms-expand {
+  display: none;
+}
+
+.sl{
+  outline: none;
+  border: none;
+  background: #0ca6e9;
+  padding: 5px 100px;
+    border-radius: 5px;
+}

@@ -16,6 +16,7 @@ import {setStep} from '../../redux/actions/user'
 import axios from 'axios';
 import config from "../../config";
 import {useNavigate} from "react-router-dom";
+import Helmet from "react-helmet";
 
 export default function HomePage(){
     const boxRef = React.useRef<HTMLDivElement>(null)
@@ -71,6 +72,7 @@ export default function HomePage(){
             .catch((err) => {
             console.log(err);
         })
+        // eslint-disable-next-line
     },[])
 
     const saveFiles = React.useCallback((data : any) : void => {
@@ -94,9 +96,12 @@ export default function HomePage(){
 
     return (
         <>
+            <Helmet>
+                <title>Tải lên tệp Excel</title>
+            </Helmet>
            <Logo/>
            <Page className="grid place-items-center overflow-none">
-                <div className="w-[70%] h-[70%] bg-[transparent] c-glass rounded-lg flex flex-col items-center">
+                <div className="w-[70%] h-[70%] bg-[transparent] c-glass rounded-lg flex flex-col items-center overflow-x-hidden">
                     <ProgressRounded/>
                     <div ref={boxRef} className="h-[70%] w-[80%] border border-dashed border-[2px] border-[#1b3c58] rounded-sm text-[#37bcf8] flex flex-col items-center justify-center gap-3">
                         <form className="h-full w-full flex flex-col items-center justify-center gap-2" method="post" action="" encType="multipart/form-data">

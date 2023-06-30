@@ -4,8 +4,8 @@ import React from "react";
 
 export default function Page({children, className}: {children: React.ReactNode, className ?: string}){
     return (
-        <section className={"w-full h-full bg-[#10172a] homepage " + className}>
-            <div className="absolute w-[108rem] flex-none flex justify-end z-0">
+        <section className={"w-full h-full bg-[#10172a] homepage overflow-x-hidden " + className}>
+            <div className="absolute w-full flex-none flex justify-end z-0 overflow-x-hidden">
                 <picture>
                     <source srcSet={docs} type="image/avif" />
                     <img

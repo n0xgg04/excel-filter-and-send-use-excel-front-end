@@ -2,7 +2,11 @@
 
 export interface UserState {
     step: number,
-    fileList: string[]
+    fileList: {
+        data: Array<string>,
+        message?: string,
+        status?: string
+    }
 }
 
 export interface configInterface{

@@ -4,7 +4,9 @@ import { UserState } from '../../interfaces/types';
 
 const initialState: UserState = {
     step: 1,
-    fileList: []
+    fileList: {
+        data: [],
+    }
 };
 
 
